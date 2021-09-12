@@ -1,11 +1,6 @@
 import pandas as pd
 import requests
-import json
-from difflib import SequenceMatcher
-import time
 from bs4 import BeautifulSoup
-from datetime import date
-import re
 
 listaJson = []
 
@@ -64,7 +59,7 @@ def BuscarDadosOlx(pages):
             except:
                 print("erro")
 
-BuscarDadosOlx(5)
+BuscarDadosOlx(100)
 
 df = pd.DataFrame(listaJson)
 df.to_excel("imoveisSLZ.xlsx", index=False)
